@@ -11,7 +11,7 @@ Clone this repo and run `cp aws* $(systemd-path user-binaries)/` in the repo to 
 
 Okta AWS CLI helper (basic, single Application) - based on https://github.com/oktadeveloper/okta-aws-cli-assume-role
 
-*Further instructions to be added...*
+*Further instructions to be added as well as a more complex script that lets you choose which Okta AWS application to use*
 
 ### awsprofile
 
