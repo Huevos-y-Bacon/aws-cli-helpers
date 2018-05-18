@@ -1,6 +1,4 @@
 #!/bin/bash
-# copy script into /usr/local/bin or ~/.local/bin (somewhere in PATH!) and chmod +x it
-
 config_required(){
     echo "Okta AWS CLI configuration required"
     exit 1
