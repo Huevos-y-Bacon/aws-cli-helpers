@@ -1,4 +1,4 @@
 #!/bin/bash
-# Add this script to /usr/local/bin or ~/.local/bin (somewhere in the PATH)
+# copy script into /usr/local/bin or ~/.local/bin (somewhere in PATH!) and chmod +x it
 
 aws sts get-caller-identity --out table; env | grep AWS_
