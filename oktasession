@@ -1,0 +1,5 @@
+#!/bin/bash
+if [ -e ~/.okta/.current-session ]
+  then cat ~/.okta/.current-session
+  else echo "No Okta session info available"
+  fi

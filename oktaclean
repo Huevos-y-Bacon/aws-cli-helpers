@@ -1,0 +1,7 @@
+#!/bin/bash
+unset AWS_DEFAULT_PROFILE
+unset AWS_PROFILE
+rm ~/.okta/.current-session
+rm ~/.okta/cookies.*
+rm ~/.okta/*.bak
+rm ~/.okta/profiles
