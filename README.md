@@ -3,7 +3,7 @@ aws cli helper scripts
 
 ## Setup
 
-Run `./setup.sh`
+Run [`./setup.sh`](./setup.sh)
 
 ## Scripts
 
