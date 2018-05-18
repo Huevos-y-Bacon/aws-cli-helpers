@@ -5,30 +5,30 @@ config_required(){
 }
 
 check_dotokta(){
-	if [[ ! -d ~/.okta ]]
-		then 
+  if [[ ! -d ~/.okta ]]
+    then 
       echo "~/.okta/ missing"
-			config_required
-			exit 1
-	fi
+      config_required
+      exit 1
+  fi
 }
 
 check_oktaconfig(){
-	if [[ -f ~/.okta/config.properties ]]
-		then 
+  if [[ -f ~/.okta/config.properties ]]
+    then 
       echo "config.properties missing"
       config_required
       exit 1
-	fi
+  fi
 }
 
 check_oktajar(){
-	if [[ -f ~/.okta/okta-aws-cli*.jar ]]
-		then 
+  if [[ -f ~/.okta/okta-aws-cli*.jar ]]
+    then 
       echo "~/.okta/okta-aws-cli*.jar missing"
       config_required
       exit 1
-	fi
+  fi
 }
 
 check_dotokta
