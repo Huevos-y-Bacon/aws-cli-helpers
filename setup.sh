@@ -1,5 +1,4 @@
 #!/bin/bash
-
 BIN=$(systemd-path user-binaries)
 echo "Copying the following files to $BIN:"
 for A in $(find . -type f -name aws\*); do echo $A; cp $A $BIN/;done
