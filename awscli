@@ -1,0 +1,41 @@
+#!/bin/bash
+
+config_required(){
+  echo "Okta AWS CLI configuration required"
+}
+
+check_dotokta(){
+	if [[ ! -d ~/.okta ]]
+		then 
+      echo "~/.okta/ missing"
+			config_required
+			exit 1
+	fi
+}
+
+check_oktaconfig(){
+	if [[ -f ~/.okta/config.properties ]]
+		then 
+      echo "config.properties missing"
+      config_required
+      exit 1
+	fi
+}
+
+check_oktajar(){
+	if [[ -f ~/.okta/okta-aws-cli*.jar ]]
+		then 
+      echo "~/.okta/okta-aws-cli*.jar missing"
+      config_required
+      exit 1
+	fi
+}
+
+check_dotokta
+check_oktaconfig
+check_oktajar
+
+java -classpath ~/.okta/*.jar com.okta.tools.awscli sts get-caller-identity --out table
+if [[ -f ~/.okta/.current-session ]]
+  then cat .okta/.current-session
+fi
