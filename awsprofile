@@ -1,5 +1,6 @@
 #!/bin/bash
-# Put awsprofile in ~/.local/bin or /usr/local/bin (somewhwre in the PATH!)
+# copy script into /usr/local/bin or ~/.local/bin (somewhere in PATH!) and chmod +x it
+
 export DEFAULT_REGION=eu-west-1
 
 awsWhoami(){ env | grep AWS ;}
