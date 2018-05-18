@@ -5,9 +5,18 @@ aws cli helper scripts
 
 Clone this repo and run `cp aws* $(systemd-path user-binaries)/` in the repo to copy the files to your user's local bin directory.
 
-## awscli
+## Scripts
 
-## awsprofile
+### awscli
 
-## awswhoami
+Okta AWS CLI helper (basic, single Application) - based on https://github.com/oktadeveloper/okta-aws-cli-assume-role
 
+*Further instructions to be added...*
+
+### awsprofile
+
+Lets you list configured AWS CLI profiles or set the profile for your session.
+
+### awswhoami
+
+Simply tells you who you are!
