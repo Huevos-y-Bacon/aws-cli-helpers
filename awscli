@@ -15,7 +15,7 @@ check_dotokta(){
 }
 
 check_oktaconfig(){
-  if [[ -f ~/.okta/config.properties ]]
+  if [[ ! -f ~/.okta/config.properties ]]
     then 
       echo "config.properties missing"
       config_required
@@ -24,7 +24,7 @@ check_oktaconfig(){
 }
 
 check_oktajar(){
-  if [[ -f ~/.okta/okta-aws-cli*.jar ]]
+  if [[ ! -f ~/.okta/okta-aws-cli*.jar ]]
     then 
       echo "~/.okta/okta-aws-cli*.jar missing"
       config_required
