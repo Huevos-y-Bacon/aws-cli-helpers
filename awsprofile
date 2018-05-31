@@ -10,6 +10,20 @@ awsProfiles(){ echo -e "\n${WHITE}AWS CLI Profiles:${NORMAL}\n"
     echo "${NORMAL}";
 }
 
+cleanup(){
+    echo clearing AWS CLI Environment Vars
+    unset AWS_DEFAULT_REGION
+    unset AWS_PROFILE
+    unset AWS_REGION
+    unset AWS_DEFAULT_PROFILE
+}
+
+if [ "$1" = "unset" ] || [ "$1" = "x" ] || [ "$1" = "clear" ] # HANDLE ARGUMENTS
+    then
+        cleanup
+        return
+fi
+
 if [ "$1" = "" ] # HANDLE ARGUMENTS
     then
         echo -e "${RED}Please specify profile name${NORMAL}:"
