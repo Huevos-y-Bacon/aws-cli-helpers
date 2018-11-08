@@ -1,5 +1,7 @@
 # aws-cli-helpers
-aws cli helper scripts
+AWS cli helper scripts
+
+All Bash unless indicated otherwise.
 
 ## Setup
 
@@ -13,7 +15,7 @@ Run [`./setup.sh`](./setup.sh)
 
 Lets you list configured AWS CLI profiles or set the profile for your session.
 
-##### awsprofile.bat
+#### awsprofile.bat [Windows CMD]
 
 Lets you do the same on Windows. Add the path to your environment variables, then call it the same way as in bash, e.g. `awsprofile`
 
