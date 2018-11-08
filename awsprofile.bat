@@ -1,6 +1,5 @@
 @echo off
-set AWS_REGION=eu-west-1
-rem set AWS_DEFAULT_REGION=%AWS_REGION%
+set DEFAULT_REGION=eu-west-1
 
 if "%1"=="" (
     call :awsProfiles
@@ -52,7 +51,7 @@ echo    - show AWS Environment Vars
 echo.
 goto EOF
 
-:awsWhoami
+:echoEnv
 echo AWS Environment Vars:
 echo ---------------------
 echo.
@@ -60,9 +59,12 @@ set | findstr /B /i "aws"
 echo.
 goto EOF
 
-:echoEnv
-echo Using AWS profile %AWS_DEFAULT_PROFILE% in region %AWS_DEFAULT_REGION%
-echo.
+:awsWhoami
+if not %AWS_PROFILE%=="" (
+    echo Currently using profile %AWS_PROFILE% in region %AWS_REGION%
+    rem echo Using AWS profile %AWS_DEFAULT_PROFILE% in region %AWS_DEFAULT_REGION%
+    echo.
+    )
 goto EOF
 
 :awsProfiles
@@ -79,6 +81,7 @@ for /F "delims=" %%G IN ('type %HOME%\.aws\config ^| findstr /B ^"[^"') DO (
     echo !str!
     )
 echo.
+call :awsWhoami
 goto EOF
 
 
@@ -101,7 +104,7 @@ set AWS_PROFILE=%1
 set AWS_DEFAULT_PROFILE=%AWS_PROFILE%
 if not "%2"=="" (
     set AWS_REGION=%2
-    )
+    ); else set AWS_REGION=eu-west-1
 set AWS_DEFAULT_REGION=%AWS_REGION%
 @echo off
 echo.
