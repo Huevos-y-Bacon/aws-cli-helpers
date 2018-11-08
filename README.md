@@ -13,6 +13,10 @@ Run [`./setup.sh`](./setup.sh)
 
 Lets you list configured AWS CLI profiles or set the profile for your session.
 
+##### awsprofile.bat
+
+Lets you do the same on Windows. Add the path to your environment variables, then call it the same way as in bash, e.g. `awsprofile`
+
 #### awswhoami
 
 Simply tells you who you are!
