@@ -17,3 +17,6 @@ fi
 echo "You're running on ${machine} - Copying the following files to $BIN:"
 for A in $(find . -type f -name aws\*); do echo $A; cp $A $BIN/;done
 for O in $(find . -type f -name okta\*); do echo $O; cp $O $BIN/;done
+
+echo -e "\nPlease add the following line to your bashrc or bash_profile:\n"
+echo -e "alias awsprofile='. $BIN/awsprofile'\n"
