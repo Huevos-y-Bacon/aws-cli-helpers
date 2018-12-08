@@ -5,7 +5,9 @@ All Bash unless indicated otherwise.
 
 ## Setup
 
-Run [`./setup.sh`](./setup.sh) - _obviously this will only work in bash. This may or may not work in Git bash on windows!_
+Note: _this will only work in bash. This may or may not work in Git bash on windows!_
+
+Run [`./setup.sh`](./setup.sh)
 
 ## Scripts
 
