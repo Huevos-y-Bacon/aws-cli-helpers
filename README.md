@@ -7,7 +7,8 @@ All Bash unless indicated otherwise.
 
 Note: _this will only work in bash. This may or may not work in Git bash on windows!_
 
-Run [`./setup.sh`](./setup.sh)
+1. Run [`./setup.sh`](./setup.sh)
+2. Add the `awsprofile` alias to your bash_profile or bashrc
 
 ## Scripts
 
